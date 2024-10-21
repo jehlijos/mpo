@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>youtube</title>
+  <script>
+    window.onload = function() {
+      var count = 8;
+      var countdown = document.getElementById('countdown');
+      
+      var interval = setInterval(function() {
+        countdown.innerHTML = count;
+        count--;
+        
+        if (count < 0) {
+          clearInterval(interval);
+          window.location.href = 'https://jehlijos.github.io/mpo/';
+        }
+      }, 1000);
+    };
+  </script>
+</head>
+<body>
+  <h1>Probíhající práce</h1>
+  <p> Tato část není zatím implementována</p> <br>
+  <p> Přesměrování na úvodní stránku za <span id="countdown">8</span> sekund ... </p>
+</body>
+</html>
