@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html>
+ <!-- yes i fucking stole this code from here  - https://www.w3schools.com/howto/howto_css_modal_images.asp -->
+<head>
+  <link rel="icon" href="icons/mpo-logo.ico" type="image/x-icon">
+  <title>Budova Ministerstva průmyslu a obchodu </title>
+  <link rel="stylesheet" href="index_css/0_000-0_999.css" media="(min-aspect-ratio: 0.001) and (max-aspect-ratio: 0.999)">
+  <link rel="stylesheet" href="index_css/1_000-1_046.css" media="(min-aspect-ratio: 1) and (max-aspect-ratio: 1.046)">
+  <link rel="stylesheet" href="index_css/1_047-1_169.css" media="(min-aspect-ratio: 1.047) and (max-aspect-ratio: 1.169)">
+  <link rel="stylesheet" href="index_css/1_170-1_300.css" media="(min-aspect-ratio: 1.170) and (max-aspect-ratio: 1.299)">
+  <link rel="stylesheet" href="index_css/1_333-1_433.css" media="(min-aspect-ratio: 1.300) and (max-aspect-ratio: 1.433)">
+  <link rel="stylesheet" href="index_css/1_434-1_600.css" media="(min-aspect-ratio: 1.434) and (max-aspect-ratio: 1.600)">
+  <link rel="stylesheet" href="index_css/1_601-1_838.css" media="(min-aspect-ratio: 1.601) and (max-aspect-ratio: 1.838)">
+  <link rel="stylesheet" href="index_css/1_839-2_333.css" media="(min-aspect-ratio: 1.839) and (max-aspect-ratio: 2.333)">
+ <link rel="stylesheet" href="index_css/2_333-2_655.css" media="(min-aspect-ratio: 2.334) and (max-aspect-ratio: 2.655)">
+ <link rel="stylesheet" href="index_css/2_655-3_000.css" media="(min-aspect-ratio: 2.656) and (max-aspect-ratio: 3)">
+ <link rel="stylesheet" href="index_css/3_000+.css" media="(min-aspect-ratio: 3.0001) and (max-aspect-ratio: 100)">
+  
+  
+  <style>
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 50; /* Sit on top */
+  padding-top: 20px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 40%;
+  max-width: 700px;
+
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+    /* Add this CSS to set a fixed width for each image tile */
+    .image-tile {
+      width: 300px; /* Adjust this to your desired width */
+      height: 300px; /* Set the height equal to the width to create a square */
+      margin: 10px;
+      display: inline-block;
+      text-align: center;
+      background-color: white; /* Fill the gaps with white color */
+      overflow: hidden; /* Hide any overflowing content */
+    }
+
+    .image-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensure the image covers the entire square without stretching */
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .image-tile img:hover {
+      opacity: 0.7;
+    }
+  </style>  
+  
+
+</head>
+
+
+
+<img src="images/baner.png" class="full-width-image" alt="Full-width image">
+
+<header>
+  <h1>Budova Ministerstva průmyslu a obchodu</h1>
+  <div style="display: flex; justify-content: center; align-items: center;">
+    <h2 style="font-size: 250%;">A její okolí</h2>
+</div>
+  <nav>   <!--https://projects.verou.me/css3patterns/#carbon -->  
+    <ul>
+      <li><a href="map.html">Mapové podklady</a></li>
+      <li><a href="model.html">Prostorový model</a></li>
+	  <li><a href="surr.html">Místa v okolí</a></li>
+      </ul>     
+    </nav>
+  </header>
+<body style="background-color:#121517; color:#e9f6fa;">
+
+
+
+<p> Nebylo snadné ministerstvu obchodu najít vhodné, rozsáhlé a všem potřebám vyhovující stanoviště o rozloze 5 000 až 6 000 m2. Volba nakonec padla na velmi zanedbané pozemky na pravém břehu Vltavy, v prostoru vyústění ulic Na Františku, Klášterské, Plžové, dnešní Řásnovky a Hradební. Vybraná lokalita odpradávna sloužila průmyslu, obchodu a živnostem a současně splňovala i požadavek umístění ministerské budovy ve vnitřním městě, nedaleko od Pražské obchodní komory a dalších důležitých institucí. Od vybudování paláce si pražské zastupitelstvo slibovalo optimální a konečné vyřešení vybrané lokality, včetně úpravy nábřeží a předmostí Štefánikova mostu. </p>
+<p> Výstavba ministerské budovy na Františku byla zahájena v roce 1928. Celkový rozpočet stavby činil 32,5 miliónu korun, to znamená, že 1 m3 zastavěného prostoru stál 266 korun, což byla při tehdejších cenách částka velmi příznivá. Podle původního záměru měla být stavba dokončena už v roce 1931, nakonec však kolaudace proběhla až v roce 1934. </p>
+<p> Autorem návrhu na výstavbu paláce Ministerstva průmyslu, obchodu a živností a Patentního úřadu byl jeden z nejvýznamnějších českých architektů, profesor architektonického navrhování a dějin středověké a starokřesťanské architektury na Českém vysokém učení technickém v Praze Josef Fanta. Zvítězil ve veřejné soutěži, které se zúčastnilo celkem šest architektů, a to i přesto, že odborná porota vytýkala jeho návrhu umístění hlavního vchodu z nábřeží a skromný vzhled severního průčelí. Vlastní výstavbou byla pověřena stavební firma Antonína Belady. Na nábřeží naproti letenskému svahu vyrostla v rámci zvolených stylových konvencí velmi noblesní a rázovitá stavba.</p>
+<p> Třípatrová budova je postavena na základním obdélném půdorysu o rozměrech 107 x 49 metrů, se samonosnými zdmi a kamennými fasádami ze žuly a pískovce. Přestože byl tento materiál použit co nejúsporněji, nejde o typický obklad, protože kvádry žuly a pískovce jsou silné 25 — 35 centimetrů a na ně navazuje cihlová zeď. Žula pochází většinou z lokalit Dolní Město, Tanvald a Železná Ruda, zatímco pískovce převážně z lomu u Lázní Mšené.</p>
+<p> Postavíte—li se zády k Vltavě, máte před sebou severní průčelí s hlavním vchodem do budovy, ukončené na obou stranách čtyřbokými věžemi. Průčelí je ve střední ose členěno rizalitem, který zahrnuje prostor vysokého přízemí a dvě podlaží hlavních reprezentačních místností. Celý rizalit vrcholí balustrovou atikou s nadživotními figurálními plastikami symbolizujícími Průmysl, Obchod, Řemesla a Plavbu, nad kterými se vypíná dekorativní prosklená kopule. Po stranách jsou mohutné, kulovitě ukončené pylony, nesoucí čtyři reliéfy státních znaků Československé republiky.</p>
+<p> Na západní straně budovy byl původně vchod do Patentního úřadu. Nad ním, v úrovni prvního patra je balkón, jehož zábradlí je tvořeno pilířky, nesoucími čtyři sochy v nadživotní velikosti, symbolizující Matematiku, Fyziku, Chemii a Inženýrství. Nejméně bohatou výzdobu má jižní průčelí. Z této strany budovy jsou vchody do dvou uzavřených dvorů, zvýrazněné portály se sochami.</p>
+<p> Na východním průčelí budovy se už opět nachází neobvykle bohatá výzdoba. Jeho střední část nad sloupy zvýrazňují figurální alegorické plastiky Podnikavost, Vynalézavost, Vytrvalost a Pravdivost. Ležící sochy s dětmi po obou stranách průčelí představují Obchod a Průmysl. Na celé budově můžete napočítat přes sto dvacet soch, doplněných velkým množstvím sgrafit, ornamentů, kovových mříží a dalších ozdobných prvků, které podtrhují celkový reprezentativní vzhled. Na této rozsáhlé výzdobě se podílelo celkem čtrnáct umělců, z nichž asi nejznámější byla dvojice Josef A. Paukert a Čeněk Vosmík. Na půdě ministerstva je dodnes uschována velká část původních sádrových modelů soch v měřítku 1:3, které musely být nejdříve schváleny Stavebním výborem. Rozsáhlá oprava celé fasády objektu včetně stavebního restaurování proběhla v roce 1999.</p>
+<i> zdroj: <a href="https://www.mpo.gov.cz/cz/rozcestnik/ministerstvo/o-ministerstvu/historie/historie-budovy-ministerstva-prumyslu-a-obchodu--18907/"> https://www.mpo.gov.cz/cz/rozcestnik/ministerstvo/o-ministerstvu/historie/historie-budovy-ministerstva-prumyslu-a-obchodu--18907/ </i> </a>
+  <main>
+ <a name="anchor"><h1 style="color:#ffffff;">Fotogalerie</h1></a>
+  <a name="anchor"><h2 style="color:#ffffff;">Novodobé</h2></a>
+<div class="image-tile">
+  <img class="myImg" src="history\modernicelek\modernicelek.jpg" alt="Jižní pohled">
+</div>
+<div class="image-tile">
+  <img class="myImg" src="history\bokhnedasocha\bokhnedasocha.jpg" alt="Jihozápadní pohled">
+</div>
+<div class="image-tile">
+  <img class="myImg" src="history\kopule2006\kopule2006.jpg" alt="Kopule">
+</div>
+<div class="image-tile">
+  <img class="myImg" src="history\ochoz\ochoz.jpg" alt="Schodiště">
+</div>
+<div class="image-tile">
+  <img class="myImg" src="history\podkopuli\podkopuli.jpg" alt="Pod kopulí">
+</div>
+<div class="image-tile">
+  <img class="myImg" src="history\rohsedicitypek\rohsedicitypek.jpg" alt="Jihovýchodní pohled">
+</div>
+<div class="image-tile">
+  <img class="myImg" src="history\rohstojicihnedejtypek\rohstojicihnedejtypek.jpg" alt="Severozápadní pohled">
+</div>
+<div class="image-tile">
+  <img class="myImg" src="history\vstup\vstup.jpg" alt="Vstup do budovy">
+</div>
+<div class="image-tile">
+  <img class="myImg" src="history\zasedacka\zasedacka.jpg" alt="Zasedací místnost">
+</div>
+<a name="anchor"><h2 style="color:#ffffff;">Historické</h2></a>
+<div class="image-tile">
+  <img class="myImg" src="history\postavbe1933\postavbe1933.png" alt="Po kolaudaci 1934">
+</div>
+<div class="image-tile">
+  <img class="myImg" src="history\1968\1968.jpg" alt="1968">
+</div>
+<div class="image-tile">
+  <img class="myImg" src="history\1977\1977.jpg" alt="1977">
+</div>
+<div class="image-tile">
+  <img class="myImg" src="history\1985\1985.png" alt="1985">
+</div>
+
+
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+  </main> 
+  
+
+  <footer>
+     autor: jehlijos@proton.me  ,   web:<a href=https://jehlijos.github.io/josef-jehlicka/>  https://jehlijos.github.io/josef-jehlicka/ </a>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                     	
+
+</footer>
+
+
+
+ <script>
+    // Get all the images with class "myImg"
+    var images = document.getElementsByClassName("myImg");
+
+    // Get the modal
+    var modal = document.querySelector(".modal");
+
+    // Get the <span> element that closes the modal
+    var span = document.querySelector(".close");
+
+    // Loop through all the images and add event listeners
+    for (var i = 0; i < images.length; i++) {
+      images[i].addEventListener("click", function () {
+        // Display the modal
+        modal.style.display = "block";
+
+        // Get the image and caption for the clicked image
+        var clickedImg = this;
+        var modalImg = modal.querySelector(".modal-content");
+        var captionText = modal.querySelector("#caption"); // Update the selector for caption
+
+        // Update the modal with the clicked image and its caption
+        modalImg.src = clickedImg.src;
+        captionText.innerHTML = clickedImg.alt;
+      });
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+  </script>
+
+
+</body>
+</html>
+
