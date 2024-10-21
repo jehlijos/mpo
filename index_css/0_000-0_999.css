@@ -101,6 +101,11 @@ footer {
    font-size: 100%;
 }
 
+p {
+   font-size: 110%;
+  }
+
+
 .profile-image {
   width: 200px;
   height: 200px;
