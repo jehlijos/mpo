@@ -25,6 +25,10 @@ header h1 {
    text-shadow: 0 0 20px rgba(0, 0, 0, 1.5), 2px 2px 35px rgba(0, 0, 0, 1.5); /* Add the gray shadow */
 }
 
+a {
+   color: #00FFFF;
+  }
+
 nav {
   position: relative;
   z-index: 2;
