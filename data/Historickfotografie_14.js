@@ -14,6 +14,7 @@ var json_Historickfotografie_14 = {
 { "type": "Feature", "properties": { "id": "8", "nazev": "1975", "popis": null, "foto_path": "history\\hast1975\\hast1975.jpg" }, "geometry": { "type": "Point", "coordinates": [ 14.424871329863386, 50.091159329863386 ] } }, 
 { "type": "Feature", "properties": { "id": "9", "nazev": "1966", "popis": null, "foto_path": "history\\salvuvnitr\\salvuvnitr.jpg" }, "geometry": { "type": "Point", "coordinates": [ 14.424678329863386, 50.092479329863386 ] } }, 
 { "type": "Feature", "properties": { "id": "10", "nazev": "1947", "popis": null, "foto_path": "history\\salvenku\\salvenku.jpg" }, "geometry": { "type": "Point", "coordinates": [ 14.425538329863386,  50.092401329863386 ] } }, 
-{ "type": "Feature", "properties": { "id": "11", "nazev": "1905", "popis": null, "foto_path": "history\\1905\\1905.jpg" }, "geometry": { "type": "Point", "coordinates": [ 14.427523329863386,  50.092287329863386 ] } }
+{ "type": "Feature", "properties": { "id": "11", "nazev": "1905", "popis": null, "foto_path": "history\\1905\\1905.jpg" }, "geometry": { "type": "Point", "coordinates": [ 14.427523329863386,  50.092287329863386 ] } },
+{ "type": "Feature", "properties": { "id": "11", "nazev": "1994", "popis": null, "foto_path": "history\\zvody\\zvody.jpg" }, "geometry": { "type": "Point", "coordinates": [ 14.422711329863386,  50.094024329863386 ] } } 
 ]
 }
