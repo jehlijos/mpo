@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html>
+ <!-- yes i fucking stole this code from here  - https://www.w3schools.com/howto/howto_css_modal_images.asp -->
+<head>
+  <link rel="icon" href="icons/mpo-logo.ico" type="image/x-icon">
+  <title>Budova Ministerstva průmyslu a obchodu </title>
+  <link rel="stylesheet" href="index_css/0_000-0_999.css" media="(min-aspect-ratio: 0.001) and (max-aspect-ratio: 0.999)">
+  <link rel="stylesheet" href="index_css/1_000-1_046.css" media="(min-aspect-ratio: 1) and (max-aspect-ratio: 1.046)">
+  <link rel="stylesheet" href="index_css/1_047-1_169.css" media="(min-aspect-ratio: 1.047) and (max-aspect-ratio: 1.169)">
+  <link rel="stylesheet" href="index_css/1_170-1_300.css" media="(min-aspect-ratio: 1.170) and (max-aspect-ratio: 1.299)">
+  <link rel="stylesheet" href="index_css/1_333-1_433.css" media="(min-aspect-ratio: 1.300) and (max-aspect-ratio: 1.433)">
+  <link rel="stylesheet" href="index_css/1_434-1_600.css" media="(min-aspect-ratio: 1.434) and (max-aspect-ratio: 1.600)">
+  <link rel="stylesheet" href="index_css/1_601-1_838.css" media="(min-aspect-ratio: 1.601) and (max-aspect-ratio: 1.838)">
+  <link rel="stylesheet" href="index_css/1_839-2_333.css" media="(min-aspect-ratio: 1.839) and (max-aspect-ratio: 2.333)">
+ <link rel="stylesheet" href="index_css/2_333-2_655.css" media="(min-aspect-ratio: 2.334) and (max-aspect-ratio: 2.655)">
+ <link rel="stylesheet" href="index_css/2_655-3_000.css" media="(min-aspect-ratio: 2.656) and (max-aspect-ratio: 3)">
+ <link rel="stylesheet" href="index_css/3_000+.css" media="(min-aspect-ratio: 3.0001) and (max-aspect-ratio: 100)">
+  
+  
+  <style>
+  
+  a {
+   color: #00FFFF;
+   text-decoration: none;
+  }
+  
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 50; /* Sit on top */
+  padding-top: 20px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 40%;
+  max-width: 700px;
+
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+    /* Add this CSS to set a fixed width for each image tile */
+    .image-tile {
+      width: 300px; /* Adjust this to your desired width */
+      height: 300px; /* Set the height equal to the width to create a square */
+      margin: 10px;
+      display: inline-block;
+      text-align: center;
+      background-color: white; /* Fill the gaps with white color */
+      overflow: hidden; /* Hide any overflowing content */
+    }
+
+    .image-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensure the image covers the entire square without stretching */
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .image-tile img:hover {
+      opacity: 0.7;
+    }
+  </style>  
+  
+
+</head>
+
+
+
+<img src="images/baner.png" class="full-width-image" alt="Full-width image">
+
+<header>
+  <h1>Budova Ministerstva průmyslu a obchodu</h1>
+  <div style="display: flex; justify-content: center; align-items: center;">
+    <h2 style="font-size: 250%;">Architekt Josef Fanta</h2>
+</div>
+  <nav>   <!--https://projects.verou.me/css3patterns/#carbon -->  
+    <ul>
+      <li><a href="index.html">Zpět</a></li>
+      </ul>     
+    </nav>
+  </header>
+<body style="background-color:#121517; color:#e9f6fa;">
+
+<h3> Biografie </h3>
+<p> Narozen 7. 12. 1856 v Sudoměřicích u Tábora, studium architektury na české technice v Praze. Práce v ateliéru J. Zítka na interiérech Národního divadla. Od r. 1881 asistentem prof. Josefa Schulze na české technice. 1889-90 stipendijní pobyt v Itálii. Roku 1900 je mu udělena na světové výstavě v Paříži zlatá medaile za interiéry. 1909-22 profesorem středověké architektury na české technice v Praze, kde později získává čestný doktorát. 1918 je zvolen řádným členem České akademie věd a umění. Kromě množství staveb, interiérů a rekonstrukcí historických památek realizuje - v souladu se svým hlubokým náboženským založením - řadu hřbitovů, pomníků, hrobek, oltářů, monstrancí, kněžských ornátů, sgrafit a fresek. Umírá ve vysokém věku 19. 6. 1954 v Praze, pohřben na Olšanech pod náhrobkem, který si sám navrhl. </p>
+<p> Josef Fanta byl přímým žákem a spolupracovníkem Josefa Zítka a Josefa Schulze. Byl všestranným umělcem - architektem význačných budov i dokonalých interiérů, památkářem, designérem výrobků ze dřeva, keramiky, kovu i textilu, byl uznávaným malířem navrhujícím též fresky a sgrafita, publicistou, pedagogem a organizátorem výtvarného dění. Patřil mezi kultivované architekty české novorenesance, který se posléze stal předním představitelem české secese. </p>
+<p> ing.arch. Kamil Dvořák, DrSc. </p>
+
+<div class="image-tile">
+  <img class="myImg" src="archifoto\typek\1.jpg" alt="Josef Fanta">
+</div>
+<div class="image-tile">
+  <img class="myImg"  src="archifoto\typek\2.jpg" alt="Josef Fanta">
+</div>
+<div class="image-tile">
+  <img class="myImg"  src="archifoto\typek\3.jpg" alt="dům Sněmovní čp.164, Praha">
+</div>
+
+
+<h3> Budova Hlavního nádraží, Praha </h3>
+<p>Výpravní budova pražského hlavního nádraží, původně Wilsonova nádraží, se stavěla mezi lety 1901 až 1909. Dominanta největšího osobního nádraží v České republice je jednou z nejvýznamnějších secesních staveb na našem území. Na místě nahradila předchozí novorenesanční výpravní budovu z druhé poloviny 19. století. Fantovou inspirací byla do jisté míry severní železniční stanice v Paříži Paris-Nord.</p>
+<p> Cestující se v budově odbavovali až do července 1977 a poté její funkci převzala přistavěná nová odbavovací hala od týmu architektů Jana Bočana, Jana a Aleny Šrámkových, Josefa Dandy, Julie Trnkové a Zdeňka Rothbauera. Historické části nádraží se nyní říká Fantova budova. </p>
+<p> Od podzimu 2021 probíhala rozsáhlá rekonstrukce zevnějšku i vnitřních prostorů této budovy. Opravy a zrestaurování se dočkal Fantův sál, Sloupový sál, chodba, kavárna a VIP salonek podle původního Fantova návrhu. Po dvou letech byla budova v prosince 2023 slavnostně otevřena a od roku 2024 jsou prostory přístupné veřejnosti v rámci komentovaných prohlídek. Velké sály jsou také k dispozici a pronájmu pro pořádání kulturních a společenských akcí. </p>
+
+<div class="image-tile">
+  <img class="myImg" src="archifoto\hln\1.png" alt="Hlavní nádraží - průčelí">
+</div>
+<div class="image-tile">
+  <img class="myImg"  src="archifoto\hln\2.png" alt="Hlavní nádraží - uvnitř">
+</div>
+<div class="image-tile">
+  <img class="myImg"  src="archifoto\hln\3.png" alt="Hlavní nádraží - uvnitř">
+</div>
+
+
+<h3> Realizace a projekty </h3>
+obytné domy v Praze, např.: novorenesanční vlastní dům v Husitské ul. čp. 89 (1886), Hlávkovy domy ve Vodičkově ul. čp. 736 (1889), secesní dům ve Spálené ul. čp. 112, smíchovský dům čp. 802 na náměstí 14. října,<br>
+interiéry pavilónů Národopisné výstavy na Starém výstavišti v Praze (1895),<br>
+novorenesanční Obereinigerova vila u náměstí v Poděbradech (1898),<br>
+regotizace kostela Narození P. Marie v Klatovech (kolem 1900),<br>
+Hlavní nádraží (Wilsonovo) v Praze - vynikající příklad české secese (1901-09),<br>
+Hlávkovy vysokoškolské koleje v Jenštejnské ul. čp. 1966 v Praze (1903),<br>
+secesní dům Hlaholu čp. 248 na Masarykově nábřeží v Praze (1903-05),<br>
+hřbitov s kaplí a hřbitovními vraty v Poděbradech (1903-07),<br>
+rekonstrukce kostela sv. Jana Nepomuckého v Rožmitálu pod Třemšínem (1904-05),<br>
+lesovna u Vortové na Chrudimsku (1904-05),<br>
+Kořínkova vila v Poděbradech (1909-10),<br>
+vila v Balbínově ul. čp. 447 v Hradci Králové (1909-10),<br>
+Mohyla míru u Slavkova (1910-12),<br>
+novorenesanční nástavba radnice v Klatovech (kolem 1925),<br>
+secesní ministerstvo průmyslu a obchodu na nábřeží Na Františku v Praze (1932-33),<br>
+rekonstrukce v Praze: vlastního raně barokního domu na Pětikostelním nám. čp. 164 (1903), renesančního domu U Vejvodů v Jilské ul. čp. 353 (1908)<br>
+<br> <br> <br>
+ <i>    zdroje:  </i> <br>
+<i> <a href="https://www.archiweb.cz/josef-fanta"> https://www.archiweb.cz/josef-fanta </i> </a> <br>
+ <i> <a href="https://www.seznamzpravy.cz/clanek/magazin-architektura-josef-fanta-stavby-261269"> https://www.seznamzpravy.cz/clanek/magazin-architektura-josef-fanta-stavby-261269 </i> </a> <br>
+ 
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+  </main> 
+  
+
+  <footer>
+     autor: jehlijos@proton.me  ,   web:<a href=https://jehlijos.github.io/josef-jehlicka/>  https://jehlijos.github.io/josef-jehlicka/ </a>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                     	
+
+</footer>
+
+
+
+ <script>
+    // Get all the images with class "myImg"
+    var images = document.getElementsByClassName("myImg");
+
+    // Get the modal
+    var modal = document.querySelector(".modal");
+
+    // Get the <span> element that closes the modal
+    var span = document.querySelector(".close");
+
+    // Loop through all the images and add event listeners
+    for (var i = 0; i < images.length; i++) {
+      images[i].addEventListener("click", function () {
+        // Display the modal
+        modal.style.display = "block";
+
+        // Get the image and caption for the clicked image
+        var clickedImg = this;
+        var modalImg = modal.querySelector(".modal-content");
+        var captionText = modal.querySelector("#caption"); // Update the selector for caption
+
+        // Update the modal with the clicked image and its caption
+        modalImg.src = clickedImg.src;
+        captionText.innerHTML = clickedImg.alt;
+      });
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+  </script>
+
+
+</body>
+</html>
+
