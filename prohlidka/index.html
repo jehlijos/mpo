@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+	<link rel="icon" href="mpo-logo.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historická prohlídka</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    #panorama {
+        width: 100%;
+        height: 100%;
+    }
+    </style>
+</head>
+<body>
+
+<div id="panorama"></div>
+<script>
+pannellum.viewer('panorama', {   
+    "default": {
+        "firstScene": "one",
+        "author": "Bc. Josef Jehlička",
+        "sceneFadeDuration": 1000
+    },
+
+    "scenes": {
+        "one": {
+            "title": "území budovy MPO (1900)",
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 0,
+            "type": "equirectangular",
+            "panorama": "1.png",
+            "hotSpots": [
+                {
+                    "pitch": -16,
+                    "yaw": 200,
+                    "type": "scene",
+                    "sceneId": "two"
+                },
+				{
+                    "pitch": 5,
+                    "yaw": 0,
+                    "type": "info",
+                    "text": "Kostel sv. Salvátora",
+					"URL": "https://maps.app.goo.gl/opFeF1AQjMWhmdUH6"
+                }
+            ]
+        },
+        "two": {
+            "title": "území budovy MPO (1900)",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "2.png",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 92,
+                    "type": "scene",
+                    "sceneId": "one",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -5,
+                    "yaw": 15,
+                    "type": "scene",
+                    "sceneId": "three",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -5,
+                    "yaw": 315,
+                    "type": "scene",
+                    "sceneId": "seven",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "three": {
+            "title": "území budovy MPO (1900)",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "3.png",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 180,
+                    "type": "scene",
+                    "sceneId": "two",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+				{
+                    "pitch": -5,
+                    "yaw": 270,
+                    "type": "scene",
+                    "sceneId": "seven",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+				{
+                    "pitch": -10,
+                    "yaw": 360,
+                    "type": "scene",
+                    "sceneId": "four",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "four": {
+            "title": "území budovy MPO (1900)",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "4.png",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 190,
+                    "type": "scene",
+                    "sceneId": "three",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+				{
+                    "pitch": -10,
+                    "yaw": 360,
+                    "type": "scene",
+                    "sceneId": "five",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "five": {
+            "title": "území budovy MPO (1900)",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "5.png",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 190,
+                    "type": "scene",
+                    "sceneId": "four",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+				{
+                    "pitch": -10,
+                    "yaw": 15,
+                    "type": "scene",
+                    "sceneId": "six",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "six": {
+            "title": "území budovy MPO (1900)",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "6.png",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 200,
+                    "type": "scene",
+                    "sceneId": "five",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "seven": {
+            "title": "území budovy MPO (1900)",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "7.png",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 20,
+                    "type": "scene",
+                    "sceneId": "two",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+				{
+                    "pitch": -0.6,
+                    "yaw": 350,
+                    "type": "scene",
+                    "sceneId": "three",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        }
+    }
+});
+</script>
+
+</body>
+</html>
