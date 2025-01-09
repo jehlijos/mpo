@@ -36,6 +36,9 @@
       width: 100px;
       height: auto;
     }
+    #loading {
+      display: none;
+    }
   </style>
 </head>
 <body style="background-color:#121517; color:#e9f6fa;">
@@ -62,7 +65,7 @@
                   auto-rotate 
                   camera-controls 
                   ar 
-                  style="display:none;"></model-viewer>
+                  poster="loading.png"></model-viewer>
   </main>
   <footer>
     <a href="zdroje.html">Zdroje</a>, autor: jehlijos@proton.me, web:
@@ -72,9 +75,13 @@
     const modelViewer = document.getElementById('modelViewer');
     const loadingContainer = document.getElementById('loading');
 
-    modelViewer.addEventListener('load', () => {
-      loadingContainer.style.display = 'none';
-      modelViewer.style.display = 'block';
+    // Show the loading image initially
+    loadingContainer.style.display = 'flex';
+
+    modelViewer.addEventListener('model-visibility', () => {
+      if (modelViewer.modelIsVisible) {
+        loadingContainer.style.display = 'none'; // Hide loading
+      }
     });
   </script>
 </body>
