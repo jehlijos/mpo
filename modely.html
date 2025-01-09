@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
 <html>
- <!-- yes i fucking stole this code from here  - https://www.w3schools.com/howto/howto_css_modal_images.asp -->
 <head>
   <link rel="icon" href="icons/mpo-logo.ico" type="image/x-icon">
   <title>Budova Ministerstva průmyslu a obchodu</title>
@@ -16,9 +14,7 @@
   <link rel="stylesheet" href="index_css/2_333-2_655.css" media="(min-aspect-ratio: 2.334) and (max-aspect-ratio: 2.655)">
   <link rel="stylesheet" href="index_css/2_655-3_000.css" media="(min-aspect-ratio: 2.656) and (max-aspect-ratio: 3)">
   <link rel="stylesheet" href="index_css/3_000+.css" media="(min-aspect-ratio: 3.0001) and (max-aspect-ratio: 100)">
-  
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-  
   <style>
     a {
       color: #00FFFF;
@@ -29,36 +25,57 @@
       height: 500px;
       background-color: #121517;
     }
-  </style>  
+    .loading-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 500px;
+      background-color: #121517;
+    }
+    .loading-container img {
+      width: 100px;
+      height: auto;
+    }
+  </style>
 </head>
-
-<img src="images/baner.png" class="full-width-image" alt="Full-width image">
-
-<header>
-  <h1>Budova Ministerstva průmyslu a obchodu</h1>
-  <div style="display: flex; justify-content: center; align-items: center;">
-    <h2 style="font-size: 250%;">Prostorový model</h2>
-  </div>
-  <nav>  
-    <ul>
-      <li><a href="index.html">Zpět</a></li>
-      <li><a href="/mpo/prohlidka/index.html">Virtuální prohlídka</a></li>
-    </ul>     
-  </nav>
-</header>
-
 <body style="background-color:#121517; color:#e9f6fa;">
+  <img src="images/baner.png" class="full-width-image" alt="Full-width image">
+  <header>
+    <h1>Budova Ministerstva průmyslu a obchodu</h1>
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <h2 style="font-size: 250%;">Prostorový model</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Zpět</a></li>
+        <li><a href="/mpo/prohlidka/index.html">Virtuální prohlídka</a></li>
+      </ul>
+    </nav>
+  </header>
   <main>
-    <model-viewer src="https://cdn.glitch.me/94ae2b5b-4290-42da-b0b3-88c7edd29b02/historic_model-opt.glb?v=1735952498933" 
+    <div id="loading" class="loading-container">
+      <img src="loading.png" alt="Loading...">
+    </div>
+    <model-viewer id="modelViewer"
+                  src="https://cdn.glitch.me/94ae2b5b-4290-42da-b0b3-88c7edd29b02/historic_model-opt.glb?v=1735952498933" 
                   alt="3D Model of Budova Ministerstva průmyslu a obchodu" 
                   auto-rotate 
                   camera-controls 
-                  ar></model-viewer>
-  </main> 
-
+                  ar 
+                  style="display:none;"></model-viewer>
+  </main>
   <footer>
-     <a href="zdroje.html">Zdroje</a>, autor: jehlijos@proton.me, web:
-     <a href="https://jehlijos.github.io/josef-jehlicka/">https://jehlijos.github.io/josef-jehlicka/</a>  
+    <a href="zdroje.html">Zdroje</a>, autor: jehlijos@proton.me, web:
+    <a href="https://jehlijos.github.io/josef-jehlicka/">https://jehlijos.github.io/josef-jehlicka/</a>
   </footer>
+  <script>
+    const modelViewer = document.getElementById('modelViewer');
+    const loadingContainer = document.getElementById('loading');
+
+    modelViewer.addEventListener('load', () => {
+      loadingContainer.style.display = 'none';
+      modelViewer.style.display = 'block';
+    });
+  </script>
 </body>
 </html>
