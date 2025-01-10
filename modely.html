@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 <head>
   <link rel="icon" href="icons/mpo-logo.ico" type="image/x-icon">
@@ -41,25 +40,27 @@
     button:hover {
       background-color: #007777;
     }
+    .hotspot {
+      display: none;
+    }
   </style>  
 </head>
 
-<img src="images/baner.png" class="full-width-image" alt="Full-width image">
-
-<header>
-  <h1>Budova Ministerstva průmyslu a obchodu</h1>
-  <div style="display: flex; justify-content: center; align-items: center;">
-    <h2 id="model-header" style="font-size: 250%;">Historický model</h2>
-  </div>
-  <nav>  
-    <ul>
-      <li><a href="index.html">Zpět</a></li>
-      <li><a href="/mpo/prohlidka/index.html">Virtuální prohlídka</a></li>
-    </ul>     
-  </nav>
-</header>
-
 <body style="background-color:#121517; color:#e9f6fa;">
+  <header>
+    <img src="images/baner.png" class="full-width-image" alt="Full-width image">
+    <h1>Budova Ministerstva průmyslu a obchodu</h1>
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <h2 id="model-header" style="font-size: 250%;">Historický model</h2>
+    </div>
+    <nav>  
+      <ul>
+        <li><a href="index.html">Zpět</a></li>
+        <li><a href="/mpo/prohlidka/index.html">Virtuální prohlídka</a></li>
+      </ul>     
+    </nav>
+  </header>
+
   <main>
     <model-viewer id="model-viewer" 
                   src="https://cdn.glitch.me/94ae2b5b-4290-42da-b0b3-88c7edd29b02/historic_model-opt.glb?v=1735952498933" 
@@ -68,6 +69,9 @@
                   camera-controls 
                   ar 
                   poster="loading.png">
+      <button class="hotspot" slot="hotspot-hand" data-position="-0.54 0.93 0.1" data-normal="-0.73 0.05 0.69">
+        <div class="annotation">This hotspot disappears completely</div>
+      </button>
     </model-viewer>
     <button id="toggle-button" onclick="toggleModel()">Přepnout na současný</button>
   </main> 
