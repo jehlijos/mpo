@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <html>
- <!-- yes i fucking stole this code from here  - https://www.w3schools.com/howto/howto_css_modal_images.asp -->
 <head>
   <link rel="icon" href="icons/mpo-logo.ico" type="image/x-icon">
   <title>Budova Ministerstva průmyslu a obchodu</title>
@@ -29,6 +28,19 @@
       height: 500px;
       background-color: #121517;
     }
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #00FFFF;
+      color: #121517;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #007777;
+    }
   </style>  
 </head>
 
@@ -37,7 +49,7 @@
 <header>
   <h1>Budova Ministerstva průmyslu a obchodu</h1>
   <div style="display: flex; justify-content: center; align-items: center;">
-    <h2 style="font-size: 250%;">Prostorový model</h2>
+    <h2 id="model-header" style="font-size: 250%;">Historický model</h2>
   </div>
   <nav>  
     <ul>
@@ -49,18 +61,44 @@
 
 <body style="background-color:#121517; color:#e9f6fa;">
   <main>
-    <model-viewer src="https://cdn.glitch.me/94ae2b5b-4290-42da-b0b3-88c7edd29b02/historic_model-opt.glb?v=1735952498933" 
-              alt="3D Model of Budova Ministerstva průmyslu a obchodu" 
-              auto-rotate 
-              camera-controls 
-              ar 
-              poster="loading.png">
-</model-viewer>
+    <model-viewer id="model-viewer" 
+                  src="https://cdn.glitch.me/94ae2b5b-4290-42da-b0b3-88c7edd29b02/historic_model-opt.glb?v=1735952498933" 
+                  alt="3D Model of Budova Ministerstva průmyslu a obchodu" 
+                  auto-rotate 
+                  camera-controls 
+                  ar 
+                  poster="loading.png">
+    </model-viewer>
+    <button id="toggle-button" onclick="toggleModel()">Přepnout na současný</button>
   </main> 
 
   <footer>
      <a href="zdroje.html">Zdroje</a>, autor: jehlijos@proton.me, web:
      <a href="https://jehlijos.github.io/josef-jehlicka/">https://jehlijos.github.io/josef-jehlicka/</a>  
   </footer>
+
+  <script>
+    let isHistorical = true;
+
+    function toggleModel() {
+      const modelViewer = document.getElementById("model-viewer");
+      const modelHeader = document.getElementById("model-header");
+      const toggleButton = document.getElementById("toggle-button");
+
+      if (isHistorical) {
+        // Switch to contemporary model
+        modelViewer.src = "https://cdn.glitch.global/94ae2b5b-4290-42da-b0b3-88c7edd29b02/nowdays_model.glb?v=1736451544926";
+        modelHeader.textContent = "Současný model";
+        toggleButton.textContent = "Přepnout na historický";
+      } else {
+        // Switch to historical model
+        modelViewer.src = "https://cdn.glitch.me/94ae2b5b-4290-42da-b0b3-88c7edd29b02/historic_model-opt.glb?v=1735952498933";
+        modelHeader.textContent = "Historický model";
+        toggleButton.textContent = "Přepnout na současný";
+      }
+
+      isHistorical = !isHistorical;
+    }
+  </script>
 </body>
 </html>
