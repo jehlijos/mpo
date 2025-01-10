@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-	<link rel="icon" href="mpo-logo.ico" type="image/x-icon">
+    <link rel="icon" href="mpo-logo.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historická prohlídka</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
@@ -18,12 +18,33 @@
     #panorama {
         width: 100%;
         height: 100%;
+        position: relative;
+    }
+    #backButton {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        font-size: 16px;
+        text-decoration: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #backButton:hover {
+        background-color: rgba(0, 0, 0, 0.9);
     }
     </style>
 </head>
 <body>
 
-<div id="panorama"></div>
+<div id="panorama">
+    <!-- Back Button -->
+    <a id="backButton" href="https://jehlijos.github.io/mpo/modely.html">Zpět</a>
+</div>
 <script>
 pannellum.viewer('panorama', {   
     "default": {
@@ -31,7 +52,6 @@ pannellum.viewer('panorama', {
         "author": "Bc. Josef Jehlička",
         "sceneFadeDuration": 1000
     },
-
     "scenes": {
         "one": {
             "title": "území budovy MPO (1900)",
@@ -47,12 +67,12 @@ pannellum.viewer('panorama', {
                     "type": "scene",
                     "sceneId": "two"
                 },
-				{
+                {
                     "pitch": 5,
                     "yaw": 0,
                     "type": "info",
                     "text": "Kostel sv. Salvátora",
-					"URL": "https://maps.app.goo.gl/opFeF1AQjMWhmdUH6"
+                    "URL": "https://maps.app.goo.gl/opFeF1AQjMWhmdUH6"
                 }
             ]
         },
@@ -104,7 +124,7 @@ pannellum.viewer('panorama', {
                     "targetYaw": -23,
                     "targetPitch": 2
                 },
-				{
+                {
                     "pitch": -5,
                     "yaw": 270,
                     "type": "scene",
@@ -112,7 +132,7 @@ pannellum.viewer('panorama', {
                     "targetYaw": -23,
                     "targetPitch": 2
                 },
-				{
+                {
                     "pitch": -10,
                     "yaw": 360,
                     "type": "scene",
@@ -137,7 +157,7 @@ pannellum.viewer('panorama', {
                     "targetYaw": -23,
                     "targetPitch": 2
                 },
-				{
+                {
                     "pitch": -10,
                     "yaw": 360,
                     "type": "scene",
@@ -162,7 +182,7 @@ pannellum.viewer('panorama', {
                     "targetYaw": -23,
                     "targetPitch": 2
                 },
-				{
+                {
                     "pitch": -10,
                     "yaw": 15,
                     "type": "scene",
@@ -204,7 +224,7 @@ pannellum.viewer('panorama', {
                     "targetYaw": -23,
                     "targetPitch": 2
                 },
-				{
+                {
                     "pitch": -0.6,
                     "yaw": 350,
                     "type": "scene",
